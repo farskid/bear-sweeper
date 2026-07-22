@@ -14,7 +14,7 @@ Goal: clear the meadow and rescue the bunny without waking all the bears.
 | Mine               | Sleeping bear                                                     |
 | Number tile (1–8)  | Color glow gradient: green (0 bears adjacent) → yellow (1) → orange (2) → red (3+). Plus "Zzz" snore icon that grows with count |
 | Flag               | Honey pot marker ("leave honey where a bear might be") — toggle mode |
-| Instant death      | Waking a bear costs 1 of 3 balloons. Bear yawns, tile locks as revealed bear. Game over only at 0 balloons |
+| Instant death      | Waking a bear costs 1 of 3 berries 🫐. Bear yawns, tile locks as revealed bear. Game over only at 0 berries |
 | Win                | All safe tiles revealed → bunny rescued, confetti + dance animation |
 
 ## Game rules
