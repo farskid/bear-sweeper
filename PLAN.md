@@ -31,10 +31,10 @@ Goal: clear the meadow and rescue the bunny without waking all the bears.
   - 🌙 Night 13×13 / 24 bears
 - First tap always safe and flood-opens a large area (mines placed after first click).
 - Flood fill on zero-adjacency tiles, same as classic.
-- 3 balloon lives shown at top. Hitting bear pops one balloon (pop animation + sound).
+- 3 berry lives 🫐 shown at top (distinct from honey marker). Hitting bear loses one berry.
 - Honey marker button in a dock below the board frame (not in the header, never overlapping tiles).
 - Lose = funny crowned-bear victory dance + silly lose jingle.
-- No timer, no score. Only stars at end (3 balloons left = 3 stars).
+- No timer, no score. Only stars at end (berries left = stars).
 
 ## Sensory cue system (the whole point)
 
@@ -52,7 +52,7 @@ Every revealed tile communicates proximity WITHOUT numerals:
 - Bright, chunky, rounded. Big tap targets (min 56px tiles).
 - Cartoon flat style: grass-green board, sky gradient background, floating clouds.
 - All CSS/SVG art — no image assets. Emoji acceptable for bear 🐻, bunny 🐰, honey 🍯,
-  balloon 🎈, flower 🌼 to keep it zero-dependency.
+  berry 🫐, flower 🌼 to keep it zero-dependency.
 - Font: rounded (e.g. "Fredoka" from Google Fonts, with system fallback).
 
 ## Animations (must-haves)
@@ -60,14 +60,14 @@ Every revealed tile communicates proximity WITHOUT numerals:
 - Tile reveal: springy flip/pop (scale bounce).
 - Flood fill: staggered ripple reveal (tiles open in waves outward, ~40ms stagger).
 - Bear wake: tile shakes, bear emoji pops up with "ROAR" wiggle, screen micro-shake.
-- Balloon pop: balloon scales up and bursts into particles.
+- Berry lost: life icon scales up and bursts into particles.
 - Win: confetti rain + bunny bounce + bears wave.
 - Idle: clouds drift, occasional "Zzz" floats up from unrevealed board.
 - All animations CSS-based where possible; JS only for confetti/particles.
 
 ## Audio
 
-- Web Audio API synthesized: pop, chirp, snore (low sine rumble), pop-balloon,
+- Web Audio API synthesized: pop, chirp, snore (low sine rumble), life-lost pop,
   win jingle (3–4 ascending notes). Mute button (persist in localStorage).
 - iOS/Safari: audio context must resume on first user gesture.
 
@@ -95,7 +95,7 @@ Every revealed tile communicates proximity WITHOUT numerals:
 - [ ] Color + Zzz + sound proximity cues on revealed tiles
 - [ ] Tapping already-revealed tile replays its sound
 - [ ] Honey flag toggle mode works on touch and mouse
-- [ ] 3-balloon lives, bear wake costs one, 0 = lose screen
+- [ ] 3-berry lives, bear wake costs one, 0 = lose screen
 - [ ] Win = bunny rescue + confetti + star rating
 - [ ] Mute toggle persists
 - [ ] First-time tutorial shows once, ❓ replay works, theme-aware icons
